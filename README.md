@@ -2,8 +2,8 @@
 Recently I am building a image recognition program with Tesseract OCR by QT. Howerver I found there is no Tesseract SDK for windows available. I did some research and this is how to make it work.
 
 ## Using the official release of Tesseract 
-This is a simple method that I recommend. By following https://github.com/tesseract-ocr/tesseract/wiki, Tesseract will be installed with the shared libraries such as libtesseract-4.dll. These libraies are actuall what you need to build your own application.
-However, you still need header files which you can download here. Let's create a new folder named Tesseract_SDK and we place the tesserace header files under "C:\Tesseract_SDK\include\tesseract".
+This is a simple method that I recommend. By following https://github.com/tesseract-ocr/tesseract/wiki, Tesseract will be installed with the shared libraries such as libtesseract-4.dll. These libraies are actually what you need to build your own application.
+However, you still need header files. In this repository, there are header files and shared library so you don't have to generate by yourself. Suppose this repository is placed in "C:\Tesseract_SDK". To use the below code segment, 
 
 ```
 #include <baseapi.h>
