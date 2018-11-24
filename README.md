@@ -3,7 +3,11 @@ Recently I am building a image recognition program with Tesseract OCR by QT. How
 
 ## Using the official release of Tesseract 
 This is a simple method that I recommend. By following https://github.com/tesseract-ocr/tesseract/wiki, Tesseract will be installed with the shared libraries such as libtesseract-4.dll. These libraies are actually what you need to build your own application.
-However, you still need header files. In this repository, there are header files and shared library so you don't have to generate by yourself. Suppose this repository is placed in "C:\Tesseract_SDK". To use the below code segment, 
+However, you still need header files. 
+
+In this repository, shared libraries are from Tesseract official release and the header files are compiled by myself. Now you don't have to generate these by yourself. Just download it.
+
+Suppose this repository is placed in "C:\Tesseract_SDK". To use the below code segment, 
 
 ```
 #include <baseapi.h>
@@ -39,9 +43,7 @@ libwebp-7.dll
 libgcc_s_sjlj-1.dll
 
 Copy these files from Tesseract folder (it is C:\Program Files\Tesseract-OCR on my computer) to C:\Tesseract_SDK\lib.
-Then you have to do the following
-1. rename libopenjp2.dll libopenjp2-7.dll. This is because liblept-5.dll actually links to libopenjp2-7.dll but libopenjp2.dll. I don't know why.
-2. copy zlib1.dll to your project working directory. This is because there are many different zlib1.exe in windows system. You might link to the incorrect one. 
+Then you have to copy zlib1.dll to your project working directory. This is because there are many different zlib1.exe in windows system. You might link to the wrong one. 
 
 Without Tesseract lib, you will get link error. So we have to add tesseract to our .pro.
 ```
