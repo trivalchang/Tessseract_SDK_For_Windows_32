@@ -24,7 +24,7 @@ Suppose this repository is placed in "C:\Tesseract_SDK". To use the below code s
 We need to add the include path in .pro file.
 
 ```
-INCLUDEPATH += "C:\Program Files\Tesseract-OCR\include\tesseract"
+INCLUDEPATH += "C:\Tesseract_SDK\include\tesseract"
 ```
 
 We also need to copy the shared libraries from the installed directory of Tesseract to our SDK folder.
