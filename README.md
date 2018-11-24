@@ -1,4 +1,4 @@
-# How to use Tesseract OCR APIs in QT on Microsoft Windows
+# Tesseract OCR SDK on Microsoft Windows
 Recently I am building a image recognition program with Tesseract OCR by QT. Howerver I found there is no Tesseract SDK for windows available. I did some research and this is how to make it work.
 
 ## Using the official release of Tesseract 
