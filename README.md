@@ -27,25 +27,9 @@ We need to add the include path in .pro file.
 INCLUDEPATH += "C:\Tesseract_SDK\include\tesseract"
 ```
 
-We also need to copy the shared libraries from the installed directory of Tesseract to our SDK folder.
-According to my expericence, the following files are necessary.
+You have to copy zlib1.dll to your project working directory. This is because there are many different zlib1.exe in windows system. You might link to the wrong one. 
 
-liblept-5.dll
-libtesseract-4.dll
-libgif-7.dll
-libjpeg-8.dll
-libopenjp2.dll
-zlib1.dll
-libtiff-5.dll
-libjbig-2.dll
-liblzma-5.dll
-libwebp-7.dll
-libgcc_s_sjlj-1.dll
-
-Copy these files from Tesseract folder (it is C:\Program Files\Tesseract-OCR on my computer) to C:\Tesseract_SDK\lib.
-Then you have to copy zlib1.dll to your project working directory. This is because there are many different zlib1.exe in windows system. You might link to the wrong one. 
-
-Without Tesseract lib, you will get link error. So we have to add tesseract to our .pro.
+Then add tesseract lib to our .pro.
 ```
 LIBS += "C:\Tesseract_SDK\lib\libtesseract-4.dll"
 ```
